@@ -5,19 +5,40 @@ const pageTitle = "Page d'accueil";
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<header class="flex">
-				<h1>ARTHUR ALLETTO</h1>
-				<a class="border-solid border-2" href="/about/">À propos de moi</a>
-		</header>
-
-		<a href="/blog/">Mes Projets</a>
-
-		<h1>Mon blog d'apprentissage Astro</h1>
+		<div class="h-screen">
+			<header class="flex w-full fixed py-[2%] px-[5%]">
+				<div class="w-1/2">
+					<h1 class="font-dmsans font-medium">ARTHUR ALLETTO</h1>
+				</div>
+				<div class="flex w-1/2 justify-end">
+					<a class="font-dmsans font-medium" href="/about/"
+						>À PROPOS DE MOI</a
+					>
+				</div>
+			</header>
+			<section
+				class="flex flex-col h-full justify-center items-center font-dmsans font-medium">
+				<h2 class="tracking-widest text-base">
+					GRAPHIC DESIGNER / MOTION DESIGNER
+				</h2>
+				<h1 class="font-dynapuff font-black text-8xl">PORTFOLIO</h1>
+				<a
+					class="mt-5 px-5 py-1 bg-black text-white rounded-tl-2xl rounded-tr-sm rounded-br-2xl rounded-bl-sm border-2 border-transparent hover:bg-white hover:text-black hover:border-2 hover:border-black"
+					href="/blog/">ENTRER</a
+				>
+			</section>
+		</div>
 	</body>
 </html>

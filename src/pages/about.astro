@@ -1,22 +1,34 @@
 ---
 const pageTitle = "À propos de moi";
 ---
-<!DOCTYPE html> 
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pageTitle}</title>
-</head>
-<body>
-    <a href="/">Accueil</a>
-    <a href="/about/">À propos de moi</a>
-    <a href="/blog/">Mes projets</a>
-    <h1>{pageTitle}</h1>
-    <h2>... et de mon nouveau site Astro !</h2>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <div class="h-screen">
+        <header class="flex w-full fixed py-10 px-20">
+            <div class="w-1/2">
+                <a href="/">Accueil</a>
+            </div>
+            <div class="flex w-1/2 justify-end">
+                <a href="/blog/">Mes projets</a>
+            </div>
+        </header>
+        <section class="flex flex-col h-full justify-center items-center font-dmsans font-medium">
+            <p>Mes études</p>
 
-    <p>Mes études</p>
+        <p>
+            Ce site se mettra à jour au fur et à mesure que je compléterai
+            davantage le tutoriel, alors revenez régulièrement voir comment se
+            déroule mon parcours !
+        </p>
+        </section>
 
-    <p>Ce site se mettra à jour au fur et à mesure que je compléterai davantage le tutoriel, alors revenez régulièrement voir comment se déroule mon parcours !</p>
-</body>
+        </div>
+    </body>
 </html>
