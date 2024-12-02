@@ -6,16 +6,25 @@ const pageTitle = "Mon blog d'apprentissage";
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
+    <link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
+			rel="stylesheet"
+		/>
   </head>
   <body>
-    <a href="/">Accueil</a>
-    <a href="/about/">À propos de moi</a>
-
-    <h1>Mon blog d'apprentissage Astro</h1>
-    <ul>
-      <li><a href="/posts/post-1/">Projet 1</a></li>
-      <li><a href="/posts/post-2/">Projet 2</a></li>
-      <li><a href="/posts/post-3/">Projet 3</a></li>
-    </ul>
+    <header class="flex w-full fixed py-[2%] px-[5%]">
+      <div class="w-1/2">
+        <a class="font-dmsans font-medium" href="/">ACCUEIL</a>
+      </div>
+      <div class="flex w-1/2 justify-end">
+        <a class="font-dmsans font-medium" href="/about/"
+          >À PROPOS DE MOI</a
+        >
+      </div>
+    </header>
+    <section>
+      
+    </section>
+   
   </body>
 </html>
