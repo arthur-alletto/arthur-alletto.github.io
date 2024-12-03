@@ -67,39 +67,42 @@ const pageTitle = "Page d'accueil";
 
 		<script>
 			// Curseur avec effet de vitesse et rebond
-			const cursor = document.querySelector(".custom-cursor");
+			const cursor = document.querySelector(".custom-cursor") as HTMLElement | null;
 			let posX = 0,
 				posY = 0; // Position actuelle du curseur
 			let mouseX = 0,
 				mouseY = 0; // Position cible de la souris
 			const speed = 0.2; // Vitesse de "rattrapage"
-
+		
 			// Mettre à jour les positions cibles en fonction du mouvement de la souris
 			document.addEventListener("mousemove", (e) => {
 				mouseX = e.clientX;
 				mouseY = e.clientY;
 			});
-
+		
 			// Animation "bouncy"
 			function animateCursor() {
-				// Calcule la différence entre la position actuelle et la position cible
-				const dx = mouseX - posX;
-				const dy = mouseY - posY;
-
-				// Applique un déplacement progressif
-				posX += dx * speed;
-				posY += dy * speed;
-
-				// Met à jour la position du curseur
-				cursor.style.transform = `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
-
+				if (cursor) { // Vérifie que le curseur n'est pas null
+					// Calcule la différence entre la position actuelle et la position cible
+					const dx = mouseX - posX;
+					const dy = mouseY - posY;
+		
+					// Applique un déplacement progressif
+					posX += dx * speed;
+					posY += dy * speed;
+		
+					// Met à jour la position du curseur
+					cursor.style.transform = `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
+				}
+		
 				// Boucle d'animation
-				requestAnimationFrame(animateCursor)
+				requestAnimationFrame(animateCursor);
 			}
-
+		
 			// Lance l'animation
-			animateCursor(); 
+			animateCursor();
 		</script>
+		
 	</body>
 </html>
  
