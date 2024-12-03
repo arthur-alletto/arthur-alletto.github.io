@@ -7,40 +7,55 @@ const pageTitle = "À propos de moi";
     <head>
         <meta charset="UTF-8" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
-			rel="stylesheet"
-		/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
+            rel="stylesheet"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{pageTitle}</title>
     </head>
     <body>
         <div class="h-screen">
             <header class="flex w-full fixed py-[2%] px-[5%]">
-				<div class="w-1/2">
-					<a class="font-dmsans font-medium" href="/"
-						>ACCUEIL</a
-					>
-				</div>
-				<div class="flex w-1/2 justify-end">
-					<a class="font-dmsans font-medium" href="/blog/"
-						>MES PROJETS</a
-					>
-				</div>
-			</header>
-        <section class="flex flex-col pt-32 items-center font-dmsans font-medium">
-            <h1 class="font-dynapuff font-black ">ABOUT ME</h1>
-            <div>
-
+                <div class="w-1/2">
+                    <a class="font-dmsans font-medium" href="/">ACCUEIL</a>
+                </div>
+                <div class="flex w-1/2 justify-end">
+                    <a class="font-dmsans font-medium" href="/blog/"
+                        >MES PROJETS</a
+                    >
+                </div>
+            </header>
+            <section
+                class="flex items-center justify-center min-h-screen"
+            >
+            <div class="container mx-auto px-6">
+                <!-- Title -->
+                <h1 class="text-4xl font-bold text-center mb-10 text-black">ABOUT ME</h1>
+                
+                <!-- Content -->
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <!-- Text Section -->
+                    <div class="lg:w-1/2 text-gray-700 text-lg leading-relaxed">
+                        <p>
+                            Hello! I'm <strong>[Arthur]</strong>, a passionate graphic designer with a love for creating 
+                            innovative visuals and stunning designs. I have expertise in branding, digital illustrations, 
+                            and user-centric design, and I enjoy turning ideas into captivating visuals. When I'm not designing, 
+                            I explore new creative trends, experiment with different styles, and sharpen my skills in visual storytelling.
+                        </p>
+                    </div>
+                    
+                    <!-- Image Section -->
+                    <div class="lg:w-1/2">
+                        <img 
+                            src=""" 
+                            alt="PHOTO DE MOI" 
+                            class="w-full max-w-sm mx-auto rounded-lg shadow-lg">
+                    </div>
+                </div>
             </div>
-
-
-
-
-       
-        </section>
-
+            </section>
         </div>
     </body>
 </html>

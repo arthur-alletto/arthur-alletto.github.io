@@ -1,30 +1,96 @@
 ---
-const pageTitle = "Mon blog d'apprentissage";
+const pageTitle = "Page d'accueil";
 ---
-<html lang="fr">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-    <link
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{pageTitle}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
 			rel="stylesheet"
 		/>
-  </head>
-  <body>
-    <header class="flex w-full fixed py-[2%] px-[5%]">
-      <div class="w-1/2">
-        <a class="font-dmsans font-medium" href="/">ACCUEIL</a>
-      </div>
-      <div class="flex w-1/2 justify-end">
-        <a class="font-dmsans font-medium" href="/about/"
-          >À PROPOS DE MOI</a
-        >
-      </div>
-    </header>
-    <section>
-      
-    </section>
-   
-  </body>
+		<style>
+			/* Curseur personnalisé */
+			.custom-cursor {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 30px;
+				height: 30px;
+				background-color: black;
+				border-radius: 50%;
+				pointer-events: none;
+				mix-blend-mode: difference;
+				transform: translate(-50%, -50%);
+				will-change: transform;
+			}
+		</style>
+	</head>
+	<body class="cursor-none">
+		<div class="h-screen">
+			<header class="flex w-full fixed py-6 px-14">
+				<div class="w-1/2">
+					<a class="font-dmsans cursor-none uppercase font-medium" href="/">accueil</a>
+				</div>
+				<div class="flex w-1/2 justify-end">
+					<a
+						class="font-dmsans cursor-none font-medium uppercase hover-target"
+						href="/about/"
+					>
+						à propos de moi
+					</a>
+				</div>
+			</header>
+			<section
+				class=""
+			>
+		
+				
+			</section>
+		</div>
+
+		<!-- Curseur personnalisé -->
+		<div class="custom-cursor"></div>
+
+		<script>
+			// Curseur avec effet de vitesse et rebond
+			const cursor = document.querySelector(".custom-cursor");
+			let posX = 0,
+				posY = 0; // Position actuelle du curseur
+			let mouseX = 0,
+				mouseY = 0; // Position cible de la souris
+			const speed = 0.2; // Vitesse de "rattrapage"
+
+			// Mettre à jour les positions cibles en fonction du mouvement de la souris
+			document.addEventListener("mousemove", (e) => {
+				mouseX = e.clientX;
+				mouseY = e.clientY;
+			});
+
+			// Animation "bouncy"
+			function animateCursor() {
+				// Calcule la différence entre la position actuelle et la position cible
+				const dx = mouseX - posX;
+				const dy = mouseY - posY;
+
+				// Applique un déplacement progressif
+				posX += dx * speed;
+				posY += dy * speed;
+
+				// Met à jour la position du curseur
+				cursor.style.transform = `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
+
+				// Boucle d'animation
+				requestAnimationFrame(animateCursor);
+			}
+
+			// Lance l'animation
+			animateCursor();
+		</script>
+	</body>
 </html>
