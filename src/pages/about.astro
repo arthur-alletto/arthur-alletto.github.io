@@ -6,38 +6,56 @@ const pageTitle = "À propos de moi";
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
             rel="stylesheet"
         />
+        <style>
+			/* Curseur personnalisé */
+			.custom-cursor {
+				--left: calc(var(--mouse-x) - 10px);
+				--top: calc(var(--mouse-y) - 10px);
+				width: 30px;
+				height: 30px;
+				background-color: black;
+				translate: var(--left) var(--top);
+				transition: 0.1s ease-out;
+				border-radius: 100%;
+				position: absolute;
+			}
+		</style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{pageTitle}</title>
     </head>
-    <body>
-        <div class="h-screen">
-            <header class="flex w-full fixed py-[2%] px-[5%]">
-                <div class="w-1/2">
-                    <a class="font-dmsans font-medium" href="/">ACCUEIL</a>
-                </div>
-                <div class="flex w-1/2 justify-end">
-                    <a class="font-dmsans font-medium" href="/blog/"
-                        >MES PROJETS</a
-                    >
-                </div>
-            </header>
+    <body class="cursor-none">
+        <div class="custom-cursor"></div>
+            <header class="flex w-full fixed py-7 px-14">
+				<div class="w-1/2 py-2 px-5">
+					<a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+						href="/">
+						accueil
+					</a>
+				</div>
+				<div class="flex w-1/2 justify-end">
+					<a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+						href="/blog/">
+						mes projets
+					</a>
+				</div>
+			</header>
             <section
                 class="flex items-center justify-center min-h-screen"
             >
             <div class="container mx-auto px-6">
                 <!-- Title -->
-                <h1 class="text-4xl font-bold text-center mb-10 text-black">ABOUT ME</h1>
+                <h1 class="font-dynapuff font-black text-8xl uppercase">
+					about me
+				</h1>
                 
                 <!-- Content -->
                 <div class="flex flex-col lg:flex-row items-center gap-8">
                     <!-- Text Section -->
-                    <div class="lg:w-1/2 text-gray-700 text-lg leading-relaxed">
+                    <div class="lg:w-1/2 text-black text-lg leading-relaxed">
                         <p>
                             Hello! I'm <strong>[Arthur]</strong>, a passionate graphic designer with a love for creating 
                             innovative visuals and stunning designs. I have expertise in branding, digital illustrations, 
@@ -50,12 +68,25 @@ const pageTitle = "À propos de moi";
                     <div class="lg:w-1/2">
                         <img 
                             src=""
-                            alt="PHOTO DE MOI" 
+                            alt="DESSIN DE MOI" 
                             class="w-full max-w-sm mx-auto rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
             </section>
-        </div>
+
+        <script>
+			// Curseur avec effet de vitesse et rebond basé sur des délais
+			const root = document.documentElement;
+			const cursor = document.querySelector(".custom-cursor");
+
+			root.addEventListener("mousemove", (event) => {
+				const x = event.clientX;
+				const y = event.clientY;
+
+				root.style.setProperty("--mouse-x", x + "px");
+				root.style.setProperty("--mouse-y", y + "px");
+			});
+		</script>
     </body>
 </html>

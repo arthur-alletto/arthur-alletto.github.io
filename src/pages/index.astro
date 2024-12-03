@@ -8,8 +8,6 @@ const pageTitle = "Page d'accueil";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{pageTitle}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
 			rel="stylesheet"
@@ -17,41 +15,33 @@ const pageTitle = "Page d'accueil";
 		<style>
 			/* Curseur personnalisé */
 			.custom-cursor {
-				/* position: fixed;
-				top: 0;
-				left: 0;
+				--left: calc(var(--mouse-x) - 10px);
+				--top: calc(var(--mouse-y) - 10px);
 				width: 30px;
 				height: 30px;
 				background-color: black;
-				border-radius: 50%;
-				pointer-events: none;
-				mix-blend-mode: difference;
-				transform: translate(-50%, -50%);
-				will-change: transform; */
-				--left: calc( var(--mouse-x) - 10px);
-				--top: calc( var(--mouse-y) - 10px);
-				width: 20px;
-				height: 20px;
-				background-color: black;
 				translate: var(--left) var(--top);
-				transition: .2s ease-out;
+				transition: 0.1s ease-out;
 				border-radius: 100%;
-			
+				position: absolute;
 			}
 		</style>
 	</head>
-	<body class="">
+	<body class="cursor-none">
 		<div class="custom-cursor"></div>
 		<div class="h-screen">
-			<header class="flex w-full fixed py-6 px-14">
-				<div class="w-1/2">
-					<h1 class="font-dmsans font-medium">ARTHUR ALLETTO</h1>
+			<header class="flex w-full fixed py-7 px-14">
+				<div class="w-1/2 py-2 px-5">
+					<h2 class="font-dmsans font-medium">ARTHUR ALLETTO</h2>
+				</div>
+				<div class="flex items-center gap-2">
+					<img class="w-10" src="/src/assets/behance.svg" alt="">
+					<img class="w-10" src="/src/assets/linkedin.svg" alt="">
+					<img class="w-10" src="/src/assets/insta.svg" alt="">
 				</div>
 				<div class="flex w-1/2 justify-end">
-					<a
-						class="cursor-none font-dmsans font-medium uppercase hover-target"
-						href="/about/"
-					>
+					<a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+						href="/about/">
 						à propos de moi
 					</a>
 				</div>
@@ -66,14 +56,13 @@ const pageTitle = "Page d'accueil";
 					portfolio
 				</h1>
 				<a
-					class="cursor-none relative border-2 border-black bg-transparent mt-5 py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+					class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent mt-5 py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
 					href="/blog/">entrer</a
 				>
 			</section>
 		</div>
 
 		<!-- Curseur personnalisé -->
-		
 
 		<script>
 			// Curseur avec effet de vitesse et rebond basé sur des délais
@@ -86,13 +75,7 @@ const pageTitle = "Page d'accueil";
 
 				root.style.setProperty("--mouse-x", x + "px");
 				root.style.setProperty("--mouse-y", y + "px");
-
-			
-
-			})
+			});
 		</script>
-		
-		
 	</body>
 </html>
- 
