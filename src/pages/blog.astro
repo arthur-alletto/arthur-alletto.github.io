@@ -35,7 +35,10 @@ const pageTitle = "Page d'accueil";
 		<div class="h-screen">
 			<header class="flex w-full fixed py-6 px-14">
 				<div class="w-1/2">
-					<a class="font-dmsans cursor-none uppercase font-medium" href="/">accueil</a>
+					<a
+						class="font-dmsans cursor-none uppercase font-medium"
+						href="/">accueil</a
+					>
 				</div>
 				<div class="flex w-1/2 justify-end">
 					<a
@@ -46,12 +49,7 @@ const pageTitle = "Page d'accueil";
 					</a>
 				</div>
 			</header>
-			<section
-				class=""
-			>
-		
-				
-			</section>
+			<section class=""></section>
 		</div>
 
 		<!-- Curseur personnalisé -->
@@ -71,26 +69,6 @@ const pageTitle = "Page d'accueil";
 				mouseX = e.clientX;
 				mouseY = e.clientY;
 			});
-
-			// Animation "bouncy"
-			function animateCursor() {
-				// Calcule la différence entre la position actuelle et la position cible
-				const dx = mouseX - posX;
-				const dy = mouseY - posY;
-
-				// Applique un déplacement progressif
-				posX += dx * speed;
-				posY += dy * speed;
-
-				// Met à jour la position du curseur
-				cursor.style.transform = `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
-
-				// Boucle d'animation
-				requestAnimationFrame(animateCursor);
-			}
-
-			// Lance l'animation
-			animateCursor();
 		</script>
 	</body>
 </html>

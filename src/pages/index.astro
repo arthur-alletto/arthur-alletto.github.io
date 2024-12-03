@@ -17,7 +17,7 @@ const pageTitle = "Page d'accueil";
 		<style>
 			/* Curseur personnalisé */
 			.custom-cursor {
-				position: fixed;
+				/* position: fixed;
 				top: 0;
 				left: 0;
 				width: 30px;
@@ -27,11 +27,21 @@ const pageTitle = "Page d'accueil";
 				pointer-events: none;
 				mix-blend-mode: difference;
 				transform: translate(-50%, -50%);
-				will-change: transform;
+				will-change: transform; */
+				--left: calc( var(--mouse-x) - 10px);
+				--top: calc( var(--mouse-y) - 10px);
+				width: 20px;
+				height: 20px;
+				background-color: black;
+				translate: var(--left) var(--top);
+				transition: .2s ease-out;
+				border-radius: 100%;
+			
 			}
 		</style>
 	</head>
-	<body class="cursor-none">
+	<body class="">
+		<div class="custom-cursor"></div>
 		<div class="h-screen">
 			<header class="flex w-full fixed py-6 px-14">
 				<div class="w-1/2">
@@ -63,44 +73,25 @@ const pageTitle = "Page d'accueil";
 		</div>
 
 		<!-- Curseur personnalisé -->
-		<div class="custom-cursor"></div>
+		
 
 		<script>
-			// Curseur avec effet de vitesse et rebond
-			const cursor = document.querySelector(".custom-cursor") as HTMLElement | null;
-			let posX = 0,
-				posY = 0; // Position actuelle du curseur
-			let mouseX = 0,
-				mouseY = 0; // Position cible de la souris
-			const speed = 0.2; // Vitesse de "rattrapage"
-		
-			// Mettre à jour les positions cibles en fonction du mouvement de la souris
-			document.addEventListener("mousemove", (e) => {
-				mouseX = e.clientX;
-				mouseY = e.clientY;
-			});
-		
-			// Animation "bouncy"
-			function animateCursor() {
-				if (cursor) {
-					const dx = mouseX - posX;
-					const dy = mouseY - posY;
-		
-					
-					posX += dx * speed;
-					posY += dy * speed;
-		
-					// Met à jour la position du curseur
-					cursor.style.transform = `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
-				}
-		
-				// Boucle d'animation
-				requestAnimationFrame(animateCursor);
-			}
-		
-			// Lance l'animation
-			animateCursor();
+			// Curseur avec effet de vitesse et rebond basé sur des délais
+			const root = document.documentElement;
+			const cursor = document.querySelector(".custom-cursor");
+
+			root.addEventListener("mousemove", (event) => {
+				const x = event.clientX;
+				const y = event.clientY;
+
+				root.style.setProperty("--mouse-x", x + "px");
+				root.style.setProperty("--mouse-y", y + "px");
+
+				console.log(y)
+
+			})
 		</script>
+		
 		
 	</body>
 </html>
