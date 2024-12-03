@@ -82,12 +82,11 @@ const pageTitle = "Page d'accueil";
 		
 			// Animation "bouncy"
 			function animateCursor() {
-				if (cursor) { // Vérifie que le curseur n'est pas null
-					// Calcule la différence entre la position actuelle et la position cible
+				if (cursor) {
 					const dx = mouseX - posX;
 					const dy = mouseY - posY;
 		
-					// Applique un déplacement progressif
+					
 					posX += dx * speed;
 					posY += dy * speed;
 		
