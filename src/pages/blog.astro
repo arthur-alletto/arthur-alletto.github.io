@@ -6,6 +6,24 @@ const pageTitle = "Page d'accueil";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
+            rel="stylesheet"
+        />
+		<style>
+			/* Curseur personnalisé */
+			.custom-cursor {
+				--left: calc(var(--mouse-x) - 10px);
+				--top: calc(var(--mouse-y) - 10px);
+				width: 30px;
+				height: 30px;
+				background-color: black;
+				translate: var(--left) var(--top);
+				transition: 0.1s ease-out;
+				border-radius: 100%;
+				position: absolute;
+			}
+		</style>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{pageTitle}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,24 +34,51 @@ const pageTitle = "Page d'accueil";
 		/>
 	</head>
 	<body class="">
-		<div class="h-screen">
-			<header class="flex w-full fixed py-6 px-14">
-				<div class="w-1/2">
-					<a
-						class="font-dmsans cursor-none uppercase font-medium"
+		<div class="custom-cursor"></div>
+			<header class="flex w-full py-6 px-14">
+				<div class="w-1/2 py-2 px-5">
+					<a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
 						href="/">accueil</a
 					>
 				</div>
 				<div class="flex w-1/2 justify-end">
-					<a
-						class="font-dmsans cursor-none font-medium uppercase hover-target"
-						href="/about/"
-					>
-						à propos de moi
-					</a>
-				</div>
+					<a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target" href="/">à propos de moi</a> 
 			</header>
-			<section class=""></section>
+			<section class="flex justify-center items-center container mx-auto p-4">
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+				  <!-- Projet 1 -->
+				  <div class="bg-white shadow-md rounded-lg overflow-hidden">
+					<img src="" alt="Image Projet 1" class="w-full h-48 object-cover">
+				  </div>
+				  <!-- Projet 2 -->
+				  <div class="bg-white shadow-md rounded-lg overflow-hidden">
+					<img src="" alt="Image Projet 2" class="w-full h-48 object-cover">
+				  </div>
+				  <!-- Projet 3 -->
+				  <div class="bg-white shadow-md rounded-lg overflow-hidden">
+					<img src="" alt="Image Projet 3" class="w-full h-48 object-cover">
+				  </div>
+				</div>
+			  </section>
+
+			  <section>
+				  
+			  </section>
+			  
 		</div>
+
+		<script>
+			// Curseur avec effet de vitesse et rebond basé sur des délais
+			const root = document.documentElement;
+			const cursor = document.querySelector(".custom-cursor");
+
+			root.addEventListener("mousemove", (event) => {
+				const x = event.clientX;
+				const y = event.clientY;
+
+				root.style.setProperty("--mouse-x", x + "px");
+				root.style.setProperty("--mouse-y", y + "px");
+			});
+		</script>
 	</body>
 </html>
