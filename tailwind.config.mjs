@@ -4,8 +4,11 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
-			colors: {
-
+			backgroundImage: {
+				'gradient-custom-hiero': 'linear-gradient(0deg, rgba(169, 160, 221, 1) 30%, transparent)',
+				'gradient-custom-ceramique': 'linear-gradient(0deg, rgba(169, 160, 221, 0.96) 30%, transparent)',
+				'gradient-custom-bunbun': 'linear-gradient(0deg, rgba(169, 160, 221, 0.96) 30%, transparent)',
+				'gradient-custom-jamventure': 'linear-gradient(0deg, rgba(173, 26, 83, 0.96) 30%, transparent)',
 			},
 
 			fontFamily: {
@@ -25,7 +28,7 @@ export default {
 				black: '900',
 			}
 
-			
+
 		},
 	},
 	plugins: [],

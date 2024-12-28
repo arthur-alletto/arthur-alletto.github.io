@@ -7,10 +7,10 @@ const pageTitle = "Page d'accueil";
 	<head>
 		<meta charset="UTF-8" />
 		<link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
-            rel="stylesheet"
-        />
-		<style>
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- <style>
 			/* Curseur personnalisé */
 			.custom-cursor {
 				--left: calc(var(--mouse-x) - 10px);
@@ -23,7 +23,7 @@ const pageTitle = "Page d'accueil";
 				border-radius: 100%;
 				position: absolute;
 			}
-		</style>
+		</style> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{pageTitle}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,68 +34,94 @@ const pageTitle = "Page d'accueil";
 		/>
 	</head>
 	<body class="">
-		<div class="custom-cursor"></div>
+		<!-- <div class="custom-cursor"></div> -->
 		<header class="flex w-full py-7 px-14 justify-between flex-wrap gap-6">
-            <div class="flex">
-                <a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
-                    href="/">
-                    accueil
-                </a>
-            </div>
-            <div class="flex items-center gap-2">
-                <a class="cursor-none" href="https://www.behance.net/mystic_all/projects"><img class="w-10" src="/assets/behance.svg" alt=""></a>
-                <a class="cursor-none" href="https://www.linkedin.com/in/arthur-alletto-8a2028259/"><img class="w-10" src="/assets/linkedin.svg" alt=""></a>
-                <a class="cursor-none" href=""><img class="w-10" src="/assets/insta.svg" alt=""></a>
-                
-            </div>
-            <div class="flex">
-                <a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
-                    href="/about/">
-                    à propos de moi
-                </a>
-            </div>
-        </header>
-			<section class="flex flex-wrap min-h-screen justify-center items-center container mx-auto p-4 gap-6">
-				
-				  <!-- Projet 1 -->
-				  <div class="bg-white rounded-2xl overflow-hidden">
-					<img src="/assets/Cover-hiero.svg" alt="Image Projet 1" class="w-full h-60 object-cover filter grayscale hover:filter-none">
-				  </div>
-				  <!-- Projet 2 -->
-				  <div class="bg-white rounded-2xl overflow-hidden">
-					<img src="/assets/Cover-destination.svg" alt="Image Projet 2" class="w-full h-60 object-cover filter grayscale hover:filter-none">
-				  </div>
-				  <!-- Projet 3 -->
-				  <div class="bg-white rounded-2xl overflow-hidden">
-					<img src="/assets/Cover-bunbun.svg" alt="Image Projet 3" class="w-full h-60 object-cover filter grayscale hover:filter-none ">
-				  </div>
-				  <!-- Projet 4 -->
-				  <div class="bg-white rounded-2xl overflow-hidden">
-					<img src="/assets/Cover-jam.svg" alt="Image Projet 3" class="w-full h-60 object-cover filter grayscale hover:filter-none">
-				  </div>
-				 
-			  </section>
-
-			 
-
-
-			  
-		</div>
-
-		<script>
-			// Curseur avec effet de vitesse et rebond basé sur des délais
-			const root = document.documentElement;
-			const cursor = document.querySelector(".custom-cursor");
-
-			root.addEventListener("mousemove", (event) => {
-				const x = event.clientX;
-				const y = event.clientY;
-
-				root.style.setProperty("--mouse-x", x + "px");
-				root.style.setProperty("--mouse-y", y + "px");
-			});
-
-			
-		</script>
+			<div class="flex">
+				<a
+					class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+					href="/"
+				>
+					accueil
+				</a>
+			</div>
+			<div class="flex items-cente gap-2">
+				<a
+					class="cursor-none"
+					href="https://www.behance.net/mystic_all/projects"
+					><img class="w-10" src="/assets/behance.svg" alt="" /></a
+				>
+				<a
+					class="cursor-none"
+					href="https://www.linkedin.com/in/arthur-alletto-8a2028259/"
+					><img class="w-10" src="/assets/linkedin.svg" alt="" /></a
+				>
+				<a class="cursor-none" href=""
+					><img class="w-10" src="/assets/insta.svg" alt="" /></a
+				>
+			</div>
+			<div class="flex">
+				<a
+					class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+					href="/about/"
+				>
+					à propos de moi
+				</a>
+			</div>
+		</header>
+		<section
+			class="flex flex-wrap h-min justify-center items-center container mx-auto p-4 gap-6"
+		>
+			<!-- Projet 1 -->
+			<div class="rounded-2xl relative overflow-hidden group">
+				<div class="relative overflow-hidden before:absolute before:w-full before:h-full before:bg-gradient-custom-hiero before:bottom-[-80px] before:transition-all before:duration-[500ms] group-hover:before:bottom-0 before:z-10 h-full">
+					<img
+						src="/assets/Cover-hiero.png"
+						alt="Image Projet 1"
+						class="w-full h-full object-cover object-top transition-all duration-[500ms] group-hover:translate-y-[-50px] group-hover:blur-[1px] relative z-0"
+					/>
+					<h3 class="absolute bottom-[-50px] left-4 font-dmsans text-white text-xl font-bold transition-all duration-[500ms] group-hover:bottom-7 z-20">
+						Création de flyers pour Hiero
+					</h3>
+				</div>
+			</div>
+			<!-- Projet 2 -->
+			<div class="rounded-2xl overflow-hidden">
+				<img
+					src="/assets/Cover-destination.svg"
+					alt="Image Projet 2"
+					class="w-full h-60 object-cover filter-none hover:filter grayscale"
+				/>
+			</div>
+			<!-- Projet 3 -->
+			<div class="rounded-2xl overflow-hidden">
+				<img
+					src="/assets/Cover-bunbun.svg"
+					alt="Image Projet 3"
+					class="w-full h-60 object-cover filter-none hover:filter grayscale"
+				/>
+			</div>
+			<!-- Projet 4 -->
+			<div class="rounded-2xl overflow-hidden">
+				<img
+					src="/assets/Cover-jam.svg"
+					alt="Image Projet 3"
+					class="w-full h-60 object-cover filter-none hover:filter grayscale"
+				/>
+			</div>
+		</section>
 	</body>
+
+	<script>
+		// Curseur avec effet de vitesse et rebond basé sur des délais
+		const root = document.documentElement;
+		const cursor = document.querySelector(".custom-cursor");
+
+		root.addEventListener("mousemove", (event) => {
+			const x = event.clientX;
+			const y = event.clientY;
+
+			root.style.setProperty("--mouse-x", x + "px");
+			root.style.setProperty("--mouse-y", y + "px");
+		});
+	</script>
 </html>
