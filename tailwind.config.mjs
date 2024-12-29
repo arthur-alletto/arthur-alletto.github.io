@@ -6,9 +6,10 @@ export default {
 		extend: {
 			backgroundImage: {
 				'gradient-custom-hiero': 'linear-gradient(0deg, rgba(169, 160, 221, 1) 30%, transparent)',
+				'gradient-custom-jamventure': 'linear-gradient(0deg, rgba(34, 32, 53, 1) 30%, transparent)',
 				'gradient-custom-ceramique': 'linear-gradient(0deg, rgba(169, 160, 221, 0.96) 30%, transparent)',
 				'gradient-custom-bunbun': 'linear-gradient(0deg, rgba(169, 160, 221, 0.96) 30%, transparent)',
-				'gradient-custom-jamventure': 'linear-gradient(0deg, rgba(173, 26, 83, 0.96) 30%, transparent)',
+				
 			},
 
 			fontFamily: {
