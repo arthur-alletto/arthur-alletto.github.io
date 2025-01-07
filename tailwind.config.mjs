@@ -13,8 +13,9 @@ export default {
 			},
 
 			fontFamily: {
-				'dmsans': ["DM Sans", "sans-serif"],
+				'lato': ["Lato", "sans-serif"],
 				'dynapuff': ["DynaPuff", "sans-serif"],
+				'poppins': ["Poppins", "sans-serif"],
 			},
 
 			fontWeight: {

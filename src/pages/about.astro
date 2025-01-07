@@ -6,90 +6,163 @@ const pageTitle = "À propos de moi";
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pageTitle}</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
         />
         <style>
-			/* Curseur personnalisé */
-			.custom-cursor {
-				--left: calc(var(--mouse-x) - 10px);
-				--top: calc(var(--mouse-y) - 10px);
-				width: 30px;
-				height: 30px;
-				background-color: black;
-				translate: var(--left) var(--top);
-				transition: 0.1s ease-out;
-				border-radius: 100%;
-				position: absolute;
-			}
-		</style>
+            /* Curseur personnalisé */
+            .custom-cursor {
+                --left: calc(var(--mouse-x) - 10px);
+                --top: calc(var(--mouse-y) - 10px);
+                width: 30px;
+                height: 30px;
+                background-color: black;
+                translate: var(--left) var(--top);
+                transition: 0.1s ease-out;
+                border-radius: 100%;
+                position: absolute;
+            }
+
+            .survol-effect {
+                transition: transform 0.3s ease;
+            }
+            .survol-effect:hover {
+                transform: translateY(-5px);
+            }
+
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{pageTitle}</title>
     </head>
-    <body class="cursor-none">
-        <div class="custom-cursor"></div>
-        <header class="flex w-full py-7 px-14 justify-between flex-wrap gap-6">
+    <body class="">
+        <!-- <div class="custom-cursor"></div> -->
+        <header
+            class="flex w-full border-b-2 border-black font-regular py-7 px-14 justify-between flex-wrap gap-6 font-poppins"
+        >
             <div class="flex">
-                <a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
-                    href="/">
+                <a
+                    class="relative border-2 border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+                    href="/"
+                >
                     accueil
                 </a>
             </div>
             <div class="flex items-center gap-2">
-                <a class="cursor-none" href="https://www.behance.net/mystic_all/projects"><img class="w-10" src="/assets/behance.svg" alt=""></a>
-                <a class="cursor-none" href="https://www.linkedin.com/in/arthur-alletto-8a2028259/"><img class="w-10" src="/assets/linkedin.svg" alt=""></a>
-                <a class="cursor-none" href=""><img class="w-10" src="/assets/insta.svg" alt=""></a>
-                
+                <a
+                    class="survol-effect"
+                    href="https://www.behance.net/mystic_all/projects"
+                    ><img class="w-10" src="/assets/behance.svg" alt="" /></a
+                >
+                <a
+                    class="survol-effect"
+                    href="https://www.linkedin.com/in/arthur-alletto-8a2028259/"
+                    ><img class="w-10" src="/assets/linkedin.svg" alt="" /></a
+                >
+                <a class="survol-effect" href=""
+                    ><img class="w-10" src="/assets/insta.svg" alt="" /></a
+                >
             </div>
             <div class="flex">
-                <a class="cursor-none relative border-2 font-dmsans font-regular border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
-                    href="/blog/">
+                <a
+                    class="relative border-2 border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+                    href="/blog/"
+                >
                     mes projets
                 </a>
             </div>
         </header>
-            <section
-                class="flex items-center justify-center min-h-screen"
-            >
-            <div class="flex flex-col container px-6 gap-8">
-                <h1 class="font-dynapuff font-black text-6xl uppercase">
-					about me
-				</h1>
-                
-                <div class="flex flex-col lg:flex-row items-center gap-8">
-                    <div class="lg:w-1/2 text-black text-md leading-relaxed">
-                        <p>
-                            Hello! I'm <strong>[Arthur]</strong>, a passionate graphic designer with a love for creating 
-                            innovative visuals and stunning designs. I have expertise in branding, digital illustrations, 
-                            and user-centric design, and I enjoy turning ideas into captivating visuals. When I'm not designing, 
-                            I explore new creative trends, experiment with different styles, and sharpen my skills in visual storytelling.
-                        </p>
+
+        <section
+            class="container flex flex-col font-poppins font-regular gap-20 px-52"
+        >
+            <!-- Description et photo -->
+            <div class="flex py-20 gap-24 border-b-2 border-black">
+                <div class="flex flex-col gap-8 justify-center">
+                    <h3 class="font-lato text-5xl font-semibold">
+                        Bonjour, je suis ARTHUR
+                    </h3>
+                    <p class="text-lg font-regular">
+                        Étudiant en 3ᵉ année de MMI à Limoges parcours "Création
+                        numérique", passionné par la création visuelle, le
+                        motion design, et l'UX/UI design.
+                    </p>
+                    <p class="text-lg font-semibold">
+                        Localisation : Bergerac, Dordogne
+                    </p>
+                    <div class="flex font-poppins">
+                        <a
+                            class="relative border-2 border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+                            href="/assets/Cover-jam.png"
+                            download="Cover-jam.png"
+                        >
+                            télécharger mon cv
+                        </a>
                     </div>
-                    
-                    <!-- Image Section -->
-                    <div class="lg:w-1/2">
-                        <img 
-                            src=""
-                            alt="PHOTO DE MOI" 
-                            class="w-full max-w-sm mx-auto rounded-lg shadow-lg">
+                </div>
+                <img
+                    src="/assets/moi.png"
+                    alt="Arthur Alletto"
+                    class="rounded-3xl w-72 shadow-2xl"
+                />
+            </div>
+            <!-- Compétences -->
+            <div class="flex flex-col items-center justify-center text-center rounded-3xl">
+                <h3 class="font-lato text-5xl font-semibold uppercase">
+                    Compétences
+                </h3>
+                <div class="flex flex-row gap-12 py-20 w-full">
+                    <div class="flex flex-col flex-1 gap-6 py-12 px-6 rounded-3xl hover:shadow-2xl transition-shadow duration-300">
+                        <h4 class="font-poppins font-semibold text-xl">Graphisme / Illustration</h4>
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="/assets/photoshop.png" class="h-20" />    
+                            <img src="/assets/illustrator.png" class="h-20" />
+                        </div>
+                    </div>
+            
+                    <div class="flex flex-col flex-1 gap-6 py-12 px-6 rounded-3xl hover:shadow-2xl transition-shadow duration-300">
+                        <h4 class="font-poppins font-semibold text-xl">Motion Design</h4>
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="/assets/aftereffect.png" class="h-20" />
+                        </div>
+                    </div>
+            
+                    <div class="flex flex-col flex-1 gap-6 py-12 px-6 rounded-3xl hover:shadow-2xl transition-shadow duration-300">
+                        <h4 class="font-poppins font-semibold text-xl">Intégration WEB</h4>
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="/assets/html.png" class="h-20" />
+                            <img src="/assets/css.png" class="h-20" />
+                        </div>
                     </div>
                 </div>
             </div>
-            </section>
+            <!-- Expériences professionnelles -->
+            <div class="mt-20">
+                <h3 class="text-4xl font-bold">Expériences professionnelles</h3>
+                <ul class="flex-row">
+                    <li>Graphiste chez XYZ Agency (2020 - Présent)</li>
+                    <li>Motion Designer chez ABC Studio (2018 - 2020)</li>
+                    <li>
+                        Freelance en graphisme et motion design (2015 - 2018)
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <script>
-			// Curseur avec effet de vitesse et rebond basé sur des délais
-			const root = document.documentElement;
-			const cursor = document.querySelector(".custom-cursor");
+            // Curseur avec effet de vitesse et rebond basé sur des délais
+            const root = document.documentElement;
+            const cursor = document.querySelector(".custom-cursor");
 
-			root.addEventListener("mousemove", (event) => {
-				const x = event.clientX;
-				const y = event.clientY;
+            root.addEventListener("mousemove", (event) => {
+                const x = event.clientX;
+                const y = event.clientY;
 
-				root.style.setProperty("--mouse-x", x + "px");
-				root.style.setProperty("--mouse-y", y + "px");
-			});
-		</script>
+                root.style.setProperty("--mouse-x", x + "px");
+                root.style.setProperty("--mouse-y", y + "px");
+            });
+        </script>
     </body>
 </html>
