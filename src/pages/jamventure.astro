@@ -1,5 +1,5 @@
 ---
-const pageTitle = "À propos de moi";
+const pageTitle = "Jamventure";
 ---
 
 <!doctype html>
@@ -39,10 +39,7 @@ const pageTitle = "À propos de moi";
             .scale-effect:hover {
                 transform: scale(1.1);
             }
-
         </style>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{pageTitle}</title>
     </head>
     <body class="">
         <!-- <div class="custom-cursor"></div> -->
@@ -82,92 +79,81 @@ const pageTitle = "À propos de moi";
             </div>
         </header>
 
-        <section
-            class="container flex flex-col font-poppins font-regular gap-20 px-52"
-        >
-            <!-- Description et photo -->
-            <div class="flex py-20 gap-24 border-b-2 border-black">
-                <div class="flex flex-col gap-8 justify-center">
-                    <h3 class="font-lato text-5xl font-semibold">
-                        Bonjour, je suis ARTHUR
-                    </h3>
+        <section class="px-52 font-poppins font-regular">
+            <div
+                class="flex flex-col md:flex-row py-20 border-b-2 border-black items-center text-center md:text-left mb-8"
+            >
+                <img
+                    src="/assets/cover-page-jam.png"
+                    alt="Image du projet"
+                    class="shadow-2xl w-full md:w-1/2 rounded-xl mb-4 md:mb-0 md:mr-8"
+                />
+                <div class="flex flex-col gap-4 justify-start">
+                    <h2 class="font-lato text-4xl font-semibold uppercase">
+                        Production d'un jeu vidéo
+                    </h2>
                     <p class="text-lg font-regular">
-                        Étudiant en 3ᵉ année de MMI à Limoges parcours "Création
-                        numérique", passionné par la création visuelle, le
-                        motion design, et l'UX/UI design.
-                    </p>
-                    <p class="text-lg font-semibold">
-                        Localisation : Bergerac, Dordogne
+                        Dans le cadre d'un projet universitaire, nous avons
+                        travaillé en groupe de trois pour concevoir un jeu vidéo
+                        sur le thème de notre choix. Ce projet visait à
+                        développer nos compétences techniques et créatives tout
+                        en réalisant un produit numérique complet. Par la suite,
+                        nous avons assuré sa communication en créant un site
+                        web, destiné à valoriser son concept et son univers
+                        graphique.
                     </p>
                     <div class="flex font-poppins">
                         <a
                             class="relative border-2 border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
-                            href="/assets/Cover-jam.png"
-                            download="Cover-jam.png"
+                            href="https://www.a-alletto.mmi-limoges.fr/wordpress_acom/?jeu=game"
                         >
-                            télécharger mon cv
+                            jouer à la démo
                         </a>
                     </div>
                 </div>
-                <img
-                    src="/assets/moi.png"
-                    alt="Arthur Alletto"
-                    class="scale-effect rounded-xl w-72 shadow-2xl"
-                />
             </div>
-            <!-- Compétences -->
-            <div class="flex flex-col items-center justify-center text-center rounded-3xl">
-                <h3 class="font-lato text-5xl font-semibold uppercase">
-                    Compétences
-                </h3>
-                <div class="flex flex-row gap-12 py-20 w-full border-b-2 border-black">
-                    <div class="flex flex-col flex-1 gap-6 py-12 scale-effect border-transparent border-2 px-6 rounded-xl shadow-2xl transition duration-300">
-                        <h4 class="font-poppins font-semibold text-xl">Graphisme / Illustration</h4>
-                        <div class="flex justify-center items-center gap-2">
-                            <img src="/assets/photoshop.png" class="h-20" />    
-                            <img src="/assets/illustrator.png" class="h-20" />
-                        </div>
-                    </div>
-            
-                    <div class="flex flex-col flex-1 gap-6 py-12 scale-effect border-transparent border-2 px-6 rounded-xl shadow-2xl transition duration-300">
-                        <h4 class="font-poppins font-semibold text-xl">Motion Design</h4>
-                        <div class="flex justify-center items-center gap-2">
-                            <img src="/assets/aftereffect.png" class="h-20" />
-                        </div>
-                    </div>
-            
-                    <div class="flex flex-col flex-1 gap-6 py-12 scale-effect border-transparent border-2 px-6 rounded-xl shadow-2xl transition duration-300">
-                        <h4 class="font-poppins font-semibold text-xl">Intégration WEB</h4>
-                        <div class="flex justify-center items-center gap-2">
-                            <img src="/assets/html.png" class="h-20" />
-                            <img src="/assets/css.png" class="h-20" />
-                        </div>
+            <div class="grid grid-cols-2 md:grid-cols-2 py-12 gap-10">
+                <div class="flex flex-col flex-1 gap-6">
+                    <h3 class="font-poppins font-semibold text-xl text-center uppercase">
+                        Site web
+                    </h3>
+                    <img
+                        src="/assets/website.png"
+                        alt="Rendu 1"
+                        class="w-full up-effect transition duration-300 shadow-2xl rounded-xl border-2 border-black"
+                    />
+                    <div class="flex justify-center font-poppins">
+                        <a
+                            class="relative border-2 border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target"
+                            href="https://www.a-alletto.mmi-limoges.fr/wordpress_acom/"
+                        >
+                            visiter le site
+                        </a>
                     </div>
                 </div>
-            </div>
-            <!-- Expériences professionnelles -->
 
-            <div class="flex flex-col items-center justify-center text-center rounded-3xl">
-                <h3 class="font-lato text-5xl font-semibold uppercase">
-                    Expériences professionnelles
-                </h3>
-                <div class="flex flex-col py-20 w-full">
-                    <div class="flex justify-between gap-5 items-center p-6 rounded-xl shadow-2xl up-effect">
-                        <div>
-                            <img src="/assets/logo-alliance.png" alt="Image" class="rounded-xl w-52">
-                        </div>
-                        <div class="text-center">
-                            <h4 class="font-poppins font-semibold text-xl">Alliance EXPO</h4>
-                            <p class="font-poppins text-lg">Stagiaire</p>
-                        </div>
-                        <div class="text-center">
-                            <p class="font-poppins text-lg">08 Avril - 31 Mai</p>
-                        </div>
+
+                
+                <div class="flex flex-col flex-1 gap-6">
+                    <h3 class="font-poppins font-semibold text-xl text-center uppercase">
+                        Behance
+                    </h3>
+                    <img
+                        src="/assets/behance.png"
+                        alt="Rendu 1"
+                        class="w-full up-effect transition duration-300 shadow-2xl rounded-xl border-2 border-black"
+                    />
+                    <div class="flex justify-center font-poppins">
+                        <a
+                            class="relative border-2 border-black bg-transparent py-2 px-5 uppercase text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-bottom-left before:scale-y-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 hover-target" href="/assets/Behance-jam.pdf"
+                            download="Behance-jam.pdf"
+                        >
+                            Télécharger PDF
+                        </a>
                     </div>
-                    <!-- Ajoutez d'autres expériences ici -->
                 </div>
+            </div>
         </section>
-
         <script>
             // Curseur avec effet de vitesse et rebond basé sur des délais
             const root = document.documentElement;
@@ -175,7 +161,7 @@ const pageTitle = "À propos de moi";
 
             root.addEventListener("mousemove", (event) => {
                 const x = event.clientX;
-                const y = event.clientY;    
+                const y = event.clientY;
 
                 root.style.setProperty("--mouse-x", x + "px");
                 root.style.setProperty("--mouse-y", y + "px");
